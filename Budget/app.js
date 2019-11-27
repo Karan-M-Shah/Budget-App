@@ -237,9 +237,9 @@ var UIController = (function() {
         },
 
         displayMonth: function() {
-
-            date = new Intl.DateTimeFormat("en", { year: "numeric", month: "long" }).format(now);
-            document.querySelector(DOMstrings.dateLabel).textContent = date;
+            date = new Date();
+            month = new Intl.DateTimeFormat("en", { year: "numeric", month: "long" }).format(date);
+            document.querySelector(DOMstrings.dateLabel).textContent = month;
         },
 
         changedType: function() {
